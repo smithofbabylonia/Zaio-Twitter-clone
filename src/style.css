@@ -4,16 +4,24 @@
     border: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-size: 20px;
+    color: black;
 }
 
 .mainpage{
     width: 100%;
+    display: flex;
     height: 100vh;
     overflow: hidden;
 }
 
+.icon:hover path{
+    fill: #1d9bf0;
+}
+
 svg{
-    width: 30px; height: 30px;
+    width: 35px; height: 35px;
+    padding: 5px;
 }
 
 nav{
@@ -29,17 +37,19 @@ nav div{
 }
 
 nav a{
-    color: black;
-    font-size: 20px;
     height: 80%;
     padding: 10px;
     width: fit-content;
     display: flex;
     align-items: center;
+    color: #000;
 }
 
 nav a:hover{
-    background-color: #ccc;
+    text-decoration: none;
+}
+.hvtg:hover{
+    background-color: #d0d0d0;
     border-radius: 50px;
     text-decoration: none;
     color: black;
@@ -47,6 +57,8 @@ nav a:hover{
 
 .tweet{
     background-color: #1d9bf0;
+    color: #fff;
+    font-weight: 600;
     width: 140px;
     justify-content: center;
     border-radius: 60px;
@@ -69,14 +81,10 @@ footer{
     position: absolute;
     padding: 5px;
     display: flex;
+    align-items: center;
     width: 40%;
     bottom: 35px;
     right: 0;
-}
-
-footer:hover{
-    background-color: #ccc;
-    border-radius: 45px;
 }
 
 footer img{
@@ -91,4 +99,137 @@ footer p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 1.5rem;
+    margin: 1px;
+}
+
+/* Main container */
+
+.main-container{
+    width: 30%;
+    height: 100vh;
+    position: relative;
+    border: solid 1px #d0d0d0;
+}
+
+.btmbrdr{
+    border-bottom: solid 1px #d0d0d0;
+}
+
+.homebar{
+    width: 100%;
+    background-color: #fffd;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    padding: 10px;
+    height: 8vh;
+}
+
+.homebar h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.mpost{
+    padding: 5px;
+    display: grid;
+    grid-row-gap: 5px;
+    justify-items: center;
+}
+
+.gr1{
+    grid-row-start: 1;
+    width: 65px;
+    
+}
+
+.gr2{
+    grid-column-start: 2;
+    width: 100%;
+}
+
+.gr2:focus-visible{
+    outline: none;
+    border-bottom: solid 1px #d0d0d0;
+}
+
+.gr3{
+    grid-column-start: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+ 
+}
+
+.gr3 i{
+    color: #1d9bf0;
+}
+
+
+/*A post*/
+.post{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 5px;
+}
+
+.post img{
+    grid-row-end: 3;
+}
+
+.scndcol{
+    grid-column-start: 2;
+}
+ 
+.post div{
+    display: flex;
+    align-items: center;
+}
+
+.prgp{
+    font-size: 18px;
+}
+
+.user i{
+    position: absolute;
+    right: 10px;
+}
+
+.reactions{
+    justify-content: space-around;
+}
+
+.reactions *{
+    margin: 0;
+}
+
+.comm:hover *{
+    fill:#1d9bf0;
+    color: #1d9bf0;
+}
+
+.retw:hover *{
+    fill:#1df01d;
+    color: #1df01d;
+}
+
+.like:hover *{
+    fill:#f01d6e;
+    color: #f01d6e;
+}
+
+/***Scrolling ability***/
+.scrly{
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.scrly::-webkit-scrollbar{
+    display: none;
+}
+
+h6{
+    padding-left: 5px;
 }
