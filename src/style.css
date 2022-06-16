@@ -133,6 +133,15 @@ footer p{
     font-weight: 600;
 }
 
+.star{
+    font-size: 25px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    padding: 3.5px;
+    transform: rotate(180deg);
+}
+
 .mpost{
     padding: 5px;
     display: grid;
@@ -151,9 +160,8 @@ footer p{
     width: 100%;
 }
 
-.gr2:focus-visible{
+input:focus-visible{
     outline: none;
-    border-bottom: solid 1px #d0d0d0;
 }
 
 .gr3{
@@ -237,4 +245,61 @@ h6{
 
 .date::before{
     content: "• ";
+}
+
+/** more section **/
+
+.round{
+    background: #f7f9f9;
+    border-radius: 15px;
+}
+
+.more{
+    padding: 10px 20px;
+    width: 20%;
+    height: 100vh;
+    background-color: red;
+    position: relative;
+}
+.more *{
+    font-size: 15px;
+}
+
+.input{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    border-radius: 30px;
+}
+.input:focus-within{
+    border: solid 1px #1d9bf0;
+}
+.input:focus-within *{
+    fill: #1d9bf0;
+    background-color: white;
+}
+.input input{
+    width: 90%;
+    height: 40px;
+    border-radius: 0 30px 30px 0;
+}
+.input svg{
+    width: 10%;
+    height: 40px;
+    border-radius: 30px 0 0 30px;
+}
+
+.input input:focus-visible + .helpsearch{ /*Need to revisit*/
+    display: block;
+}
+
+.helpsearch{
+    position: absolute;
+    top: 52px; padding: 5px;
+    left: 0; display: none;
+    width: 100%; height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #f7f9f9;
+    box-shadow: 2px 2px 5px #d0d0d0, -1px 0 5px #d0d0d0;
 }
