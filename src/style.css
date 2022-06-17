@@ -4,12 +4,16 @@
     border: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
+}
+body{
+    display: flex; height: 100vh;
+    overflow: hidden;
 }
 
 .mainpage{
-    width: 100%;
+    width: 65%;
     display: flex;
     height: 100vh;
     overflow: hidden;
@@ -28,6 +32,9 @@ nav{
     width: 35%; height: 100vh;
     margin-top: 20px;
     position: relative;
+}
+nav *{
+    font-size: 20px;
 }
 
 nav div{
@@ -107,7 +114,7 @@ footer p{
 /* Main container */
 
 .main-container{
-    width: 30%;
+    width: 40%;
     height: 100vh;
     position: relative;
     border: solid 1px #d0d0d0;
@@ -175,13 +182,19 @@ input:focus-visible{
 .gr3 i{
     color: #1d9bf0;
 }
-
+.gr4{
+    width: 100px;
+}
 
 /*A post*/
 .post{
     display: grid;
     grid-template-columns: 15% 85%;
     padding: 5px;
+}
+
+.post:hover{
+    background-color: #f7f9f9;
 }
 
 .post img{
@@ -256,13 +269,9 @@ h6{
 
 .more{
     padding: 10px 20px;
-    width: 20%;
+    width: 30%;
     height: 100vh;
-    background-color: red;
     position: relative;
-}
-.more *{
-    font-size: 15px;
 }
 
 .input{
@@ -270,6 +279,7 @@ h6{
     height: 42px;
     display: flex;
     border-radius: 30px;
+    z-index: 1;
 }
 .input:focus-within{
     border: solid 1px #1d9bf0;
@@ -302,4 +312,36 @@ h6{
     border-radius: 10px;
     border: solid 1px #f7f9f9;
     box-shadow: 2px 2px 5px #d0d0d0, -1px 0 5px #d0d0d0;
+}
+
+.signup{
+    display: none;
+}
+.trending{
+    padding: 5px 0;
+}
+
+h3, h4, p{
+    margin: 0;/*maintenance*/
+}
+.trending h3{
+    font-size: 20px;
+    font-weight: 800;
+}
+.trending h4{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.trendcard{
+    padding: 10px 5px;
+    position: relative;
+    width: 100%;
+}
+.trendcard i{
+    position: absolute;
+    right: 0;top: 10px;
+}
+.trendcard:hover{
+    background-color: #d0d0d0;
 }
