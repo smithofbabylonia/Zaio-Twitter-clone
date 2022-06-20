@@ -33,6 +33,7 @@ nav{
     width: 35%; height: 100vh;
     margin-top: 20px;
     position: relative;
+    background: #fff;
 }
 nav *{
     font-size: 20px;
@@ -131,6 +132,7 @@ footer p{
     background-color: #fffd;
     position: sticky;
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
     top: 0;
     padding: 10px;
@@ -140,6 +142,7 @@ footer p{
 .homebar h1{
     font-size: 32px;
     font-weight: 600;
+    margin: 0;
 }
 
 .star{
@@ -148,6 +151,7 @@ footer p{
     width: 40px;
     height: 40px;
     padding: 3.5px;
+    font-weight: 800;
     transform: rotate(180deg);
 }
 
@@ -160,7 +164,7 @@ footer p{
 
 .gr1{
     grid-row-start: 1;
-    width: 65px;
+    width: 48px;
     
 }
 
@@ -192,7 +196,7 @@ input:focus-visible{
 .post{
     display: grid;
     grid-template-columns: 15% 85%;
-    padding: 5px;
+    padding: 5px; cursor: pointer;
 }
 
 .post:hover{
@@ -220,6 +224,10 @@ input:focus-visible{
 .user i{
     position: absolute;
     right: 10px;
+}
+.user h5{
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .reactions{
@@ -273,7 +281,7 @@ h6{
 
 .more{
     padding: 10px 20px;
-    width: 30%;
+    width: 30%; min-height: 100vh;
     height: fit-content;
     position: sticky;
     top: -490px; /** or something*/
@@ -330,12 +338,18 @@ h6{
     padding: 5px 0;
 }
 
+.trending::after{ /* move to JS */
+    content: "Show more";
+    color: #1d9bf0;
+    padding: 10px;
+}
 h3, h4, p{
     margin: 0;/*maintenance*/
 }
 .trending h3{
     font-size: 20px;
     font-weight: 800;
+    padding: 5px;
 }
 .trending h4{
     font-size: 15px;
@@ -343,13 +357,13 @@ h3, h4, p{
 }
 
 .trendcard{
-    padding: 10px 5px;
+    padding: 10px;
     position: relative;
-    width: 100%;
+    width: 100%; cursor: pointer;
 }
 .trendsd{
     position: absolute;
-    right: 0;top: 10px;
+    right: 2px;top: 10px;
 }
 .trendcard:hover{
     background-color: rgba(0, 0, 0, 0.05);
@@ -373,4 +387,49 @@ button.trendsd{
     background: #000;
     color: white;
     font-weight: 600;
+}
+
+.minsc{
+    display: none;
+}
+
+@media only screen and (max-width:500px) {
+    
+    nav{
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+    nav .material-icons{
+        font-size: 35px;
+    }
+    nav div{
+        display: flex;/* Home search notifications messages*/
+        width: 100%; height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .mainpage{
+        width: 100%;
+    }
+
+    .maxsc{
+        display: none;
+    }
+    .main-container{
+        width: 100%;
+    }
+    .minsc{
+        display: inherit;
+    }
+    .icon{
+        position: absolute;
+        left: 48%;
+    }
+
+    .icon *{
+        fill: #1d9bf0;
+    }
 }
